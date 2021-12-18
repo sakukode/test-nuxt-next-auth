@@ -52,8 +52,10 @@ export default {
     },
     strategies: {
       facebook: {
-        client_id: process.env.FACEBOOK_APP_ID,
-        userinfo_endpoint: 'https://graph.facebook.com/v2.12/me?fields=id',
+        endpoints: {
+          userInfo: 'https://graph.facebook.com/v6.0/me?fields=id,name'
+        },
+        clientId: '1119168138144587',
         scope: ['public_profile']
       },
     }
