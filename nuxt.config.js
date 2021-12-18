@@ -38,7 +38,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth',
+    '@nuxtjs/auth-next',
     'nuxt-buefy',
     '@nuxtjs/dotenv',
     ['cookie-universal-nuxt', { parseJSON: false }],
@@ -72,7 +72,7 @@ export default {
   },
 
   // To use https on localhost:3000
-  server: process.env.NODE_ENV !== 'production' ? {
+  server: (process.env.NODE_ENV !== 'production') ? {
     https: {
       key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
       cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
