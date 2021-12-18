@@ -38,7 +38,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
+    '@nuxtjs/auth',
     'nuxt-buefy',
     '@nuxtjs/dotenv',
     ['cookie-universal-nuxt', { parseJSON: false }],
@@ -53,8 +53,8 @@ export default {
     strategies: {
       facebook: {
         client_id: process.env.FACEBOOK_APP_ID,
-        userinfo_endpoint: 'https://graph.facebook.com/v2.12/me?fields=id,name,email',
-        scope: ['email', 'public_profile']
+        userinfo_endpoint: 'https://graph.facebook.com/v2.12/me?fields=id',
+        scope: ['public_profile']
       },
     }
   },
